@@ -42,7 +42,6 @@ Please cite our paper if you find it helpful.
 
 ## [Survey](#content)
 
-### Transition Matrix
 
 1. B. Frénay and M. Verleysen, **Classification in the presence of label noise: a survey**, IEEE Transactions on Neural Networks and Learning Systems, vol. 25, no. 5, pp. 845–869, 2013.
 [paper](https://romisatriawahono.net/lecture/rm/survey/machine%20learning/Frenay%20-%20Classification%20in%20the%20Presence%20of%20Label%20Noise%20-%202014.pdf)
@@ -57,6 +56,8 @@ Please cite our paper if you find it helpful.
 [paper](https://arxiv.org/pdf/2007.08199.pdf)
 
 ## [Data](#content)
+
+### Transition Matrix
 
 1. B. van Rooyen and R. C. Williamson, **A theory of learning with corrupted labels**, Journal of Machine Learning Research, vol. 18, no. 1, pp. 8501–8550, 2017.
 [paper](https://www.jmlr.org/papers/volume18/16-315/16-315.pdf)
