@@ -1,4 +1,4 @@
-# Few-Shot Papers
+# Label Noise Papers
 
 This repository contains Label-Noise Representation Learning (LNRL) papers mentioned in our survey "A Survey of Label-noise Representation Learning: Past, Present, and Future". 
 
