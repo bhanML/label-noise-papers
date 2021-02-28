@@ -2,7 +2,7 @@
 
 This repository contains Label-Noise Representation Learning (LNRL) papers mentioned in our survey "A Survey of Label-noise Representation Learning: Past, Present, and Future". 
 
-We will update this paper list to include new FSL papers periodically. 
+We will update this paper list to include new LNRL papers periodically. 
 The current version is updated on 2021.03.03.
 
 ## Citation 
