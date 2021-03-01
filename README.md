@@ -312,3 +312,7 @@ Please cite our paper if you find it helpful.
 
 1. V. Tangkaratt, B. Han, M. E. Khan, and M. Sugiyama, **Variational imitation learning with diverse-quality demonstrations**, in ICML, 2020.
 [paper](https://pdfs.semanticscholar.org/f319/069e750f7178727b7e161570d036ca34a082.pdf)
+
+### Automated Machine Learning (AutoML)
+
+1. Q. Yao, H. Yang, B. Han, G. Niu, J. Kwok. **Searching to exploit memorization effect in learning from noisy labels**, ICML, 2020, [paper](http://arxiv.org/abs/1911.02377) [code](https://github.com/AutoML-4Paradigm/S2E)
