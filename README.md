@@ -38,6 +38,7 @@ Please cite our paper if you find it helpful.
     1. [Instance-dependent LNRL](#Instance-dependent-LNRL)
     1. [Adversarial LNRL](#Adversarial-LNRL)
     1. [Noisy Data](#Noisy_Data)
+    1. [Automated Machine Learning (AutoML)](#AutoML)
 
 
 ## [Survey](#content)
