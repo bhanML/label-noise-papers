@@ -23,22 +23,29 @@ Please cite our paper if you find it helpful.
 1. [Survey](#Survey)
 2. [Data](#Data)
     1. [Transition Matrix](#Transition-Matrix)
+    1. [Adaptation Layer](#Adaptation_Layer)
+    1. [Loss Correction](#Loss_Correction)
+    1. [Prior Knowledge](#Prior_Knowledge)
     1. [Others](#Others)
 3. [Objective](#Objective)
-    1. [Reguarization](#Reguarization)
+    1. [Regularization](#Regularization)
     1. [Reweighting](#Reweighting)
     1. [Redesigning](#Redesigning)
     1. [Others](#Others)
 4. [Optimization](#Optimization)
+    1. [Memorization Effect](#Memorization_Effect)
     1. [Self-training](#Self-training)
     1. [Co-training](#Co-training)
+    1. [Beyond Memorization](#Beyond_Memorization)
     1. [Others](#Others)
 5. [Future Directions](#Future-Directions)
     1. [New Datasets](#New-Datasets)
     1. [Instance-dependent LNRL](#Instance-dependent-LNRL)
     1. [Adversarial LNRL](#Adversarial-LNRL)
+    1. [Automated INRL](#AutoML)
     1. [Noisy Data](#Noisy_Data)
-    1. [Automated Machine Learning (AutoML)](#AutoML)
+    1. [Double Descent](#Double_Descent)
+    
 
 
 ## [Survey](#content)
@@ -63,37 +70,46 @@ Please cite our paper if you find it helpful.
 1. B. van Rooyen and R. C. Williamson, **A theory of learning with corrupted labels**, Journal of Machine Learning Research, vol. 18, no. 1, pp. 8501–8550, 2017.
 [paper](https://www.jmlr.org/papers/volume18/16-315/16-315.pdf)
 
+1. G. Patrini, A. Rozza, A. Krishna Menon, R. Nock, and L. Qu, **Making deep neural networks robust to label noise: A loss correction approach**, in CVPR, 2017.
+[paper](https://arxiv.org/pdf/1609.03683.pdf)
+
+### Adaptation Layer
+
 1. S. Sukhbaatar, J. Bruna, M. Paluri, L. Bourdev, and R. Fergus, **Training convolutional networks with noisy labels**, in ICLR Workshop, 2015.
 [paper](https://arxiv.org/pdf/1406.2080.pdf)
 
 1. J. Goldberger and E. Ben-Reuven, **Training deep neural-networks using a noise adaptation layer**, in ICLR, 2017.
 [paper](https://openreview.net/pdf?id=H12GRgcxg)
 
-1. G. Patrini, A. Rozza, A. Krishna Menon, R. Nock, and L. Qu, **Making deep neural networks robust to label noise: A loss correction approach**, in CVPR, 2017, pp. 1944–1952.
+1. I. Misra, C. Lawrence Zitnick, M. Mitchell, and R. Girshick, **Seeing through the human reporting bias: Visual classifiers from noisy human-centric labels**, in CVPR, 2016.
+[paper](https://arxiv.org/pdf/1512.06974.pdf)
+
+### Loss Correction
+
+1. G. Patrini, A. Rozza, A. Krishna Menon, R. Nock, and L. Qu, **Making deep neural networks robust to label noise: A loss correction approach**, in CVPR, 2017.
 [paper](https://arxiv.org/pdf/1609.03683.pdf)
 
-1. D. Hendrycks, M. Mazeika, D. Wilson, and K. Gimpel, **Using trusted data to train deep networks on labels corrupted by severe noise**, in NeurIPS, 2018, pp. 10 456–10 465.
+1. D. Hendrycks, M. Mazeika, D. Wilson, and K. Gimpel, **Using trusted data to train deep networks on labels corrupted by severe noise**, in NeurIPS, 2018.
 [paper](https://arxiv.org/pdf/1802.05300.pdf)
 
 1. M. Lukasik, S. Bhojanapalli, A. K. Menon, and S. Kumar, **Does label smoothing mitigate label noise?** in ICML, 2020.
 [paper](https://arxiv.org/pdf/2003.02819.pdf)
 
-1. B. Han, J. Yao, G. Niu, M. Zhou, I. Tsang, Y. Zhang, and M. Sugiyama, **Masking: A new perspective of noisy supervision**, in NeurIPS, 2018, pp. 5836–5846.
+### Prior Knowledge
+
+1. B. Han, J. Yao, G. Niu, M. Zhou, I. Tsang, Y. Zhang, and M. Sugiyama, **Masking: A new perspective of noisy supervision**, in NeurIPS, 2018.
 [paper](https://arxiv.org/pdf/1805.08193.pdf)
 
 1. X. Xia, T. Liu, N.Wang, B. Han, C. Gong, G. Niu, and M. Sugiyama, **Are anchor points really indispensable in label-noise learning?** in NeurIPS, 2019.
 [paper](https://arxiv.org/pdf/1906.00189.pdf)
 
-### Others
+1. Y. Li, J. Yang, Y. Song, L. Cao, J. Luo, and L.-J. Li, **Learning from noisy labels with distillation**, in ICCV, 2017.
+[paper](https://arxiv.org/pdf/1703.02391.pdf)
 
-1. I. Misra, C. Lawrence Zitnick, M. Mitchell, and R. Girshick, **Seeing through the human reporting bias: Visual classifiers from noisy human-centric labels**, in CVPR, 2016.
-[paper](https://arxiv.org/pdf/1512.06974.pdf)
+### Others
 
 1. J. Krause, B. Sapp, A. Howard, H. Zhou, A. Toshev, T. Duerig, J. Philbin, and L. Fei-Fei, **The unreasonable effectiveness of noisy data for fine-grained recognition**, in ECCV, 2016.
 [paper](https://arxiv.org/pdf/1511.06789.pdf)
-
-1. Y. Li, J. Yang, Y. Song, L. Cao, J. Luo, and L.-J. Li, **Learning from noisy labels with distillation**, in ICCV, 2017.
-[paper](https://arxiv.org/pdf/1703.02391.pdf)
 
 1. C. G. Northcutt, T.Wu, and I. L. Chuang, **Learning with confident examples: Rank pruning for robust classification with noisy labels,** in UAI, 2017.
 [paper](https://arxiv.org/pdf/1705.01936.pdf)
@@ -139,13 +155,13 @@ Please cite our paper if you find it helpful.
 1. T. Liu and D. Tao, **Classification with noisy labels by importance reweighting**, IEEE Transactions on pattern analysis and machine intelligence, vol. 38, no. 3, pp. 447–461, 2015.
 [paper](https://arxiv.org/pdf/1411.7718.pdf)
 
-1. Y. Wang, A. Kucukelbir, and D. M. Blei, **Robust probabilistic modeling with bayesian data reweighting,** in ICML, 2017, pp. 3646–3655.
+1. Y. Wang, A. Kucukelbir, and D. M. Blei, **Robust probabilistic modeling with bayesian data reweighting,** in ICML, 2017.
 [paper](https://arxiv.org/pdf/1606.03860.pdf)
 
 1. E. Arazo, D. Ortego, P. Albert, N. E. O’Connor, and K. McGuinness, **Unsupervised label noise modeling and loss correction**, in ICML, 2019.
 [paper](https://arxiv.org/pdf/1904.11238.pdf)
 
-1. J. Shu, Q. Xie, L. Yi, Q. Zhao, S. Zhou, Z. Xu, and D. Meng, “Meta-weight-net: Learning an explicit mapping for sample weighting,” in NeurIPS, 2019, pp. 1919–1930.
+1. J. Shu, Q. Xie, L. Yi, Q. Zhao, S. Zhou, Z. Xu, and D. Meng, **Meta-weight-net: Learning an explicit mapping for sample weighting**, in NeurIPS, 2019.
 [paper](https://arxiv.org/pdf/1902.07379.pdf)
 
 ### Redesigning
@@ -153,7 +169,7 @@ Please cite our paper if you find it helpful.
 1. A. K. Menon, A. S. Rawat, S. J. Reddi, and S. Kumar, **Can gradient clipping mitigate label noise?** in ICLR, 2020.
 [paper](https://openreview.net/pdf?id=rklB76EKPr)
 
-1. Z. Zhang and M. Sabuncu, **Generalized cross entropy loss for training deep neural networks with noisy labels**, in NeurIPS, 2018, pp. 8778–8788.
+1. Z. Zhang and M. Sabuncu, **Generalized cross entropy loss for training deep neural networks with noisy labels**, in NeurIPS, 2018.
 [paper](https://arxiv.org/pdf/1805.07836.pdf)
 
 1. N. Charoenphakdee, J. Lee, and M. Sugiyama, **On symmetric losses for learning from corrupted labels**, in ICML, 2019.
@@ -165,7 +181,7 @@ Please cite our paper if you find it helpful.
 1. Y. Lyu and I. W. Tsang, **Curriculum loss: Robust learning and generalization against label corruption**, in ICLR, 2020.
 [paper](https://arxiv.org/pdf/1905.10045.pdf)
 
-1. S. Laine and T. Aila, **Temporal ensembling for semi-supervised learning,** in ICLR, 2017.
+1. S. Laine and T. Aila, **Temporal ensembling for semi-supervised learning**, in ICLR, 2017.
 [paper](https://arxiv.org/pdf/1610.02242.pdf)
 
 1. D. T. Nguyen, C. K. Mummadi, T. P. N. Ngo, T. H. P. Nguyen, L. Beggel, and T. Brox, **Self: Learning to filter noisy labels with self-ensembling**, in ICLR, 2020.
@@ -214,9 +230,17 @@ Please cite our paper if you find it helpful.
 
 ## [Optimization](#content)
 
+### Memorization Effect
+
+1. C. Zhang, S. Bengio, M. Hardt, . BRecht, and O. Vinyals. **Understanding deep learning requires rethinking generalization**, in ICML, 2016. 
+[paper](https://openreview.net/pdf?id=Sy8gdB9xx)
+
+1. D. Arpit, S. Jastrzębski, N. Ballas, D. Krueger, E. Bengio, M. S. Kanwal, and S. Lacoste-Julien. **A closer look at memorization in deep networks**, In ICML, 2017.
+[paper](http://proceedings.mlr.press/v70/arpit17a/arpit17a.pdf)
+
 ### Self-training
 
-1. L. Jiang, Z. Zhou, T. Leung, L.-J. Li, and L. Fei-Fei, **Mentornet: Learning data-driven curriculum for very deep neural networks on corrupted labels**, in ICML, 2018, pp. 2304–2313.
+1. L. Jiang, Z. Zhou, T. Leung, L.-J. Li, and L. Fei-Fei, **Mentornet: Learning data-driven curriculum for very deep neural networks on corrupted labels**, in ICML, 2018.
 [paper](http://proceedings.mlr.press/v80/jiang18c/jiang18c.pdf)
 
 1. M. Ren, W. Zeng, B. Yang, and R. Urtasun, **Learning to reweight examples for robust deep learning**, in ICML, 2018.
@@ -227,7 +251,7 @@ Please cite our paper if you find it helpful.
 
 ### Co-training
 
-1. B. Han, Q. Yao, X. Yu, G. Niu, M. Xu, W. Hu, I. Tsang, and M. Sugiyama, **Co-teaching: Robust training of deep neural networks with extremely noisy labels**, in NeurIPS, 2018, pp. 8527–8537.
+1. B. Han, Q. Yao, X. Yu, G. Niu, M. Xu, W. Hu, I. Tsang, and M. Sugiyama, **Co-teaching: Robust training of deep neural networks with extremely noisy labels**, in NeurIPS, 2018.
 [paper](https://arxiv.org/pdf/1804.06872.pdf)
 
 1. X. Yu, B. Han, J. Yao, G. Niu, I. W. Tsang, and M. Sugiyama, **How does disagreement help generalization against label corruption?** in ICML, 2019.
@@ -236,7 +260,7 @@ Please cite our paper if you find it helpful.
 1. Q. Yao, H. Yang, B. Han, G. Niu, and J. T. Kwok, **Searching to exploit memorization effect in learning with noisy labels**, in ICML, 2020.
 [paper](http://proceedings.mlr.press/v119/yao20b/yao20b.pdf)
 
-### Others
+### Beyond Memorization
 
 1. J. Li, R. Socher, and S. C. Hoi, **Dividemix: Learning with noisy labels as semi-supervised learning**, in ICLR, 2020.
 [paper](https://arxiv.org/pdf/2002.07394.pdf)
@@ -250,15 +274,53 @@ Please cite our paper if you find it helpful.
 1. P. Chen, B. Liao, G. Chen, and S. Zhang, **Understanding and utilizing deep neural networks trained with noisy labels**, in ICML, 2019.
 [paper](http://proceedings.mlr.press/v97/chen19g/chen19g.pdf)
 
+### Others
+
+1. A. Veit, N. Alldrin, G. Chechik, I. Krasin, A. Gupta, and S. Belongie, **Learning from noisy large-scale datasets with minimal supervision**, in CVPR, 2017.
+[paper](https://arxiv.org/pdf/1701.01619.pdf)
+
+1. B. Zhuang, L. Liu, Y. Li, C. Shen, and I. Reid, **Attend in groups: a weakly-supervised deep learning framework for learning from web data**, in CVPR, 2017.
+[paper](https://arxiv.org/pdf/1611.09960.pdf)
+
+1. K.-H. Lee, X. He, L. Zhang, and L. Yang, **Cleannet: Transfer learning for scalable image classifier training with label noise**, in CVPR, 2018.
+[paper](https://arxiv.org/pdf/1711.07131.pdf)
+
+1. S. Guo, W. Huang, H. Zhang, C. Zhuang, D. Dong, M. R. Scott,and D. Huang, **Curriculumnet: Weakly supervised learning from large-scale web images**, in ECCV, 2018.
+[paper]https://arxiv.org/pdf/1808.01097.pdf)
+
+1. J. Deng, J. Guo, N. Xue, and S. Zafeiriou, **Arcface: Additive angular margin loss for deep face recognition**, in CVPR, 2019.
+[paper](https://arxiv.org/pdf/1801.07698.pdf)
+
+1. X. Wang, S. Wang, J. Wang, H. Shi, and T. Mei, **Co-mining: Deep face recognition with noisy labels**,  in ICCV, 2019.
+[paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Wang_Co-Mining_Deep_Face_Recognition_With_Noisy_Labels_ICCV_2019_paper.pdf)
+
+1. J. Huang, L. Qu, R. Jia, and B. Zhao, **O2u-net: A simple noisylabel detection approach for deep neural networks**, in ICCV, 2019.
+[paper](https://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_O2U-Net_A_Simple_Noisy_Label_Detection_Approach_for_Deep_Neural_ICCV_2019_paper.pdf)
+
+1. J. Han, P. Luo, and X. Wang, **Deep self-learning from noisy labels**, in ICCV, 2019.
+[paper](https://arxiv.org/pdf/1908.02160.pdf)
+
+1. H. Harutyunyan, K. Reing, G. V. Steeg, and A. Galstyan, **Improving generalization by controlling label-noise information in neural network weights**, in ICML, 2020.
+[paper](https://arxiv.org/pdf/2002.07933.pdf)
+
+1. H. Wei, L. Feng, X. Chen, and B. An, **Combating noisy labels by agreement: A joint training method with co-regularization**, in CVPR, 2020.
+[paper](https://arxiv.org/pdf/2003.02752.pdf)
+
+1. Z. Zhang, H. Zhang, S. O. Arik, H. Lee, and T. Pfister, **Distilling effective supervision from severe label noise**, in CVPR, 2020.
+[paper](https://arxiv.org/pdf/1910.00701.pdf)
+
 ## [Future Directions](#content)
 
 ### New Datasets
 
-1. T. Xiao, T. Xia, Y. Yang, C. Huang, and X. Wang, **Learning from massive noisy labeled data for image classification**, in CVPR, 2015, pp. 2691–2699.
+1. T. Xiao, T. Xia, Y. Yang, C. Huang, and X. Wang, **Learning from massive noisy labeled data for image classification**, in CVPR, 2015.
 [paper](https://openaccess.thecvf.com/content_cvpr_2015/papers/Xiao_Learning_From_Massive_2015_CVPR_paper.pdf)
 
 1. L. Jiang, D. Huang, M. Liu, and W. Yang, **Beyond synthetic noise: Deep learning on controlled noisy labels**, in ICML, 2020.
 [paper](http://proceedings.mlr.press/v119/jiang20c/jiang20c.pdf)
+
+1. W. Li, L. Wang, W. Li, E. Agustsson, and L. Van Gool. **Webvision database: Visual learning and understanding from web data**. arXiv preprint arXiv:1708.02862, 2017.
+[paper](https://arxiv.org/pdf/1708.02862.pdf)
 
 ### Instance-dependent LNRL
 
@@ -279,6 +341,11 @@ Please cite our paper if you find it helpful.
 1. J. Zhang, X. Xu, B. Han, G. Niu, L. Cui, M. Sugiyama, and M. Kankanhalli, **Attacks which do not kill training make adversarial learning stronger**, in ICML, 2020.
 [paper](http://proceedings.mlr.press/v119/zhang20z/zhang20z.pdf)
 
+### Automated LNRL
+
+1. Q. Yao, H. Yang, B. Han, G. Niu, J. Kwok. **Searching to exploit memorization effect in learning from noisy labels**, in ICML, 2020.
+ [paper](http://arxiv.org/abs/1911.02377) [code](https://github.com/AutoML-4Paradigm/S2E)
+
 ### Noisy Data
 
 1. J. Zhang, B. Han, L. Wynter, K. H. Low, and M. Kankanhalli, **Towards robust resnet: A small step but a giant leap**, in IJCAI, 2019.
@@ -293,7 +360,7 @@ Please cite our paper if you find it helpful.
 1. F. Liu, J. Lu, B. Han, G. Niu, G. Zhang, and M. Sugiyama, **Butterfly: A panacea for all difficulties in wildly unsupervised domain adaptation**, arXiv preprint arXiv:1905.07720, 2019.
 [paper](https://arxiv.org/pdf/1905.07720.pdf)
 
-1.  X. Yu, T. Liu, M. Gong, K. Zhang, K. Batmanghelich, and D. Tao, **Label-noise robust domain adaptation**,” in ICML, 2020.
+1.  X. Yu, T. Liu, M. Gong, K. Zhang, K. Batmanghelich, and D. Tao, **Label-noise robust domain adaptation**, in ICML, 2020.
 [paper](http://proceedings.mlr.press/v119/yu20c/yu20c.pdf)
 
 1. S. Wu, X. Xia, T. Liu, B. Han, M. Gong, N. Wang, H. Liu, and G. Niu, **Multi-class classification from noisy-similarity-labeled data**, arXiv preprint arXiv:2002.06508, 2020.
@@ -314,6 +381,12 @@ Please cite our paper if you find it helpful.
 1. V. Tangkaratt, B. Han, M. E. Khan, and M. Sugiyama, **Variational imitation learning with diverse-quality demonstrations**, in ICML, 2020.
 [paper](https://pdfs.semanticscholar.org/f319/069e750f7178727b7e161570d036ca34a082.pdf)
 
-### Automated Machine Learning (AutoML)
 
-1. Q. Yao, H. Yang, B. Han, G. Niu, J. Kwok. **Searching to exploit memorization effect in learning from noisy labels**, ICML, 2020, [paper](http://arxiv.org/abs/1911.02377) [code](https://github.com/AutoML-4Paradigm/S2E)
+### Double Descent
+
+1. P. Nakkiran, G. Kaplun, Y. Bansal, T. Yang, B. Barak, and I. Sutskever. **Deep double descent: Where bigger models and more data hurt**， in ICLR, 2019.
+[paper](https://openreview.net/pdf?id=B1g5sA4twr)
+
+1. Z. Yang, Y. Yu, C. You, J. Steinhardt, Y. Ma. **Rethinking Bias-Variance Trade-off for Generalization of Neural Networks**, in ICML, 2020.
+[paper](http://proceedings.mlr.press/v119/yang20j/yang20j.pdf)
+
