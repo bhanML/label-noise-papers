@@ -13,8 +13,7 @@ Please cite our paper if you find it helpful.
 @article{han2020survey,
   title={A survey of label-noise representation learning: Past, present and future},
   author={Han, Bo and Yao, Quanming and Liu, Tongliang and Niu, Gang and Tsang, Ivor W and Kwok, James T and Sugiyama, Masashi},
-  journal={arXiv preprint arXiv:2011.04406},
-  year={2020}
+  year={2021}
 }
 ```
 
