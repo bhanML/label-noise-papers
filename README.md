@@ -285,7 +285,7 @@ Please cite our paper if you find it helpful.
 [paper](https://arxiv.org/pdf/1711.07131.pdf)
 
 1. S. Guo, W. Huang, H. Zhang, C. Zhuang, D. Dong, M. R. Scott,and D. Huang, **Curriculumnet: Weakly supervised learning from large-scale web images**, in ECCV, 2018.
-[paper]https://arxiv.org/pdf/1808.01097.pdf)
+[paper](https://arxiv.org/pdf/1808.01097.pdf)
 
 1. J. Deng, J. Guo, N. Xue, and S. Zafeiriou, **Arcface: Additive angular margin loss for deep face recognition**, in CVPR, 2019.
 [paper](https://arxiv.org/pdf/1801.07698.pdf)
