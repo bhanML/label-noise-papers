@@ -188,6 +188,8 @@ Please cite our paper if you find it helpful.
 1. X. Ma, Y. Wang, M. E. Houle, S. Zhou, S. M. Erfani, S.-T. Xia, S. Wijewickrema, and J. Bailey, **Dimensionality-driven learning with noisy labels**, in ICML, 2018.
 [paper](http://proceedings.mlr.press/v80/ma18d/ma18d.pdf)
 
+1. A. Castellani, S. Schmitt, B. Hammer, **Estimating the Electrical Power Output of Industrial Devices with End-to-End Time-Series Classification in the Presence of Label Noise**, in ECML/PKDD, 2021. [paper](https://arxiv.org/pdf/2105.00349.pdf) [code](https://github.com/Castel44/SREA)
+
 ### Others
 
 1. S. Branson, G. Van Horn, and P. Perona, **Lean crowdsourcing: Combining humans and machines in an online system**, in CVPR, 2017.
